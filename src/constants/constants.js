@@ -3,7 +3,7 @@ export const projects = [
     title: "Mobile Menufacturer",
     description:
       "I create this mobile menufacturer website that sells mobile parts. I've used React, Firebase authentication,Tailwindcss with daisyUI, and a protected route system and data fetching on this website. and finally, include Stripe for payment",
-    image: "/images/3.jpg",
+    image: "/images/4.jpg",
     tags: ["React", "JavaScript"],
     source: "https://github.com/arfat-beep/manufacturer-website-server",
     visit: "https://mobile-manufacturer.web.app/",
