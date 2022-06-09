@@ -1,0 +1,42 @@
+.form-main {
+  width: 100%;
+}
+.form-main input[type="submit"]:hover {
+  cursor: pointer;
+}
+input:not([type="submit"]),
+textarea {
+  width: 100%;
+}
+.form-main .form-input {
+  margin: 10px;
+}
+.form-divide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.form-main input,
+.form-input textarea {
+  background-color: #212d45;
+  color: #fff;
+  padding: 9px;
+  border-radius: 10px;
+  border-color: transparent;
+}
+::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+}
+
+::-ms-input-placeholder {
+  color: #fff;
+}
+@media screen and (max-width: 640px) {
+  .form-divide {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

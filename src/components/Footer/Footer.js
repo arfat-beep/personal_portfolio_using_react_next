@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillGithub, AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
 
+import emailjs from "@emailjs/browser";
 import { SocialIcons } from "../Header/HeaderStyles";
 import { ListItem, ListTitle } from "../Technologies/TechnologiesStyles";
 import {
@@ -16,6 +17,26 @@ import {
 } from "./FooterStyles";
 
 const Footer = () => {
+  const handleForm = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_iiwj2ac",
+        "template_fhh6ad9",
+        e.target,
+        "W2SODrk3RyjCN-oZc"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
     <FooterWrapper>
       <LinkList>
@@ -30,6 +51,35 @@ const Footer = () => {
           </LinkItem>
         </LinkColumn>
       </LinkList>
+      <div>
+        <form onSubmit={handleForm} action="" className="form-main">
+          <div className="form-divide">
+            <div className="form-input">
+              <input type="text" name="name" placeholder="Enter your Name" />
+            </div>
+            <div className="form-input">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                id=""
+              />
+            </div>
+          </div>
+          <div className="form-input">
+            <textarea
+              placeholder="Enter your message"
+              id=""
+              cols="30"
+              rows="10"
+              name="message"
+            ></textarea>
+          </div>
+          <div className="form-input">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
       <SocialIconsContainer>
         <CompanyContainer>
           <Slogan>Innovating one project at a time</Slogan>

@@ -16,13 +16,20 @@ const Hero = (props) => (
         My personal Portfolio
       </SectionTitle>
       <SectionText>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-        perspiciatis delectus fugiat ullam necessitatibus ab obcaecati quae sed,
-        omnis quasi illo eligendi quia, eveniet voluptatibus cumque blanditiis
-        porro consequatur ea?
+        I'm a professional web developer. I have experience working on basic
+        <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>{" "}
+        and <strong>React</strong>. I've also experience on creating WordPress
+        website.
       </SectionText>
-      <Button onClick={() => (window.location = "https://arfat.xyz/")}>
-        Learn More
+      <Button
+        onClick={() =>
+          window.open(
+            `https://drive.google.com/file/d/1lPcZHPzI1h-xvLkFrqK-A6W2cq1qF2lr/view?usp=sharing`,
+            "_blank"
+          )
+        }
+      >
+        Download CV
       </Button>
     </LeftSection>
   </Section>

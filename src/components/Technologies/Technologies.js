@@ -46,7 +46,7 @@ const Technologies = () => (
         <ListContainer>
           <ListTitle>UI/UX</ListTitle>
           <ListParagraph>
-            Experience with <br /> tools like Figma
+            Learning with <br /> tools like Figma
           </ListParagraph>
         </ListContainer>
       </ListItem>
