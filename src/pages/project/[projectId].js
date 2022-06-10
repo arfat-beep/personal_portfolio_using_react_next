@@ -12,15 +12,17 @@ import {
   UtilityList,
 } from "../../components/Projects/ProjectsStyles";
 const projectDetails = ({ projectId }) => {
-  const project_de = projects.find((project) => project.id == projectId);
-  console.log(project_de);
+  const router = useRouter();
+  const id = router?.query?.projectId;
+
+  const project_de = projects.find((project) => project?.id == id);
   return (
     <>
       <Header />
       <Section>
         <div className="project_details">
           <div className="img_div">
-            {project_de.image.map((img) => (
+            {project_de?.image.map((img) => (
               <div>
                 <img src={img} />
               </div>
@@ -29,7 +31,7 @@ const projectDetails = ({ projectId }) => {
           <div className="project_desc">
             <ListTitle>Top features</ListTitle>
             <ul className="project_desc_ul">
-              {project_de.details_desc.map((desc) => (
+              {project_de?.details_desc.map((desc) => (
                 <li style={{ marginTop: "15px", fontSize: "24px" }}>
                   <AiOutlineArrowRight style={{ marginRight: "10px" }} />
                   {desc}
@@ -39,13 +41,13 @@ const projectDetails = ({ projectId }) => {
           </div>
           <div className="project_links">
             <UtilityList>
-              <ExternalLinks href={project_de.source}>
-                {project_de.server ? "Client" : "Code"}
+              <ExternalLinks href={project_de?.source}>
+                {project_de?.server ? "Client" : "Code"}
               </ExternalLinks>
-              {project_de.server && (
-                <ExternalLinks href={project_de.server}>Server</ExternalLinks>
+              {project_de?.server && (
+                <ExternalLinks href={project_de?.server}>Server</ExternalLinks>
               )}
-              <ExternalLinks href={project_de.visit}>Live site</ExternalLinks>
+              <ExternalLinks href={project_de?.visit}>Live site</ExternalLinks>
             </UtilityList>
           </div>
         </div>
@@ -55,6 +57,7 @@ const projectDetails = ({ projectId }) => {
   );
 };
 export const getServerSideProps = async (context) => {
+  console.log(context.query);
   const { projectId } = context.query;
   if (!projectId) {
     projectId = null;
