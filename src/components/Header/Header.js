@@ -25,11 +25,16 @@ const Header = () => (
             marginBottom: 20,
           }}
         >
-          <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
+          <DiCssdeck size="3rem" /> <Span>Arfatur Rahman</Span>
         </a>
       </Link>
     </Div1>
     <Div2>
+      <li>
+        <Link href={"/"}>
+          <NavLink>Home</NavLink>
+        </Link>
+      </li>
       <li>
         <Link href={"#project"}>
           <NavLink>Porjects</NavLink>

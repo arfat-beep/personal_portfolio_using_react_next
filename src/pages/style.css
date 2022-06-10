@@ -35,8 +35,80 @@ textarea {
 ::-ms-input-placeholder {
   color: #fff;
 }
+/* bringTop */
+
+@keyframes animateTheButton {
+  0% {
+    right: 15%;
+    bottom: 10%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 30%;
+    opacity: 0;
+  }
+}
+.bringTopAttribute {
+  position: fixed;
+  right: 15%;
+  bottom: 10%;
+  cursor: pointer;
+  padding: 5px 5px 0 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #212d45;
+  text-align: center;
+  font-size: 22px;
+  box-shadow: -1px 1px 18px 2px #fff;
+}
+.animateBtn {
+  animation: animateTheButton 0.5s ease-in-out;
+}
+.ProjectsStyles__ExternalLinks-l76idc-9 a {
+  color: #d4c0c0;
+}
+/* project details  */
+.project_details .img_div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 30px;
+  margin: 30px;
+}
+.project_desc_ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.project_details img {
+  width: 100%;
+}
 @media screen and (max-width: 640px) {
   .form-divide {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .bringTop {
+    right: 10%;
+    bottom: 10%;
+  }
+  .project_details .img_div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .project_desc_ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .bringTop {
+    right: 5%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .bringTop {
+    right: 10%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bringTop {
+    right: 18%;
   }
 }

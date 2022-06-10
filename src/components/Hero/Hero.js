@@ -12,8 +12,8 @@ const Hero = (props) => (
   <Section row nodepadding>
     <LeftSection>
       <SectionTitle main center>
-        Welcome to <br />
-        My personal Portfolio
+        Arfatur Rahman <br />
+        MERN developer
       </SectionTitle>
       <SectionText>
         I'm a professional web developer. I have experience working on basic
