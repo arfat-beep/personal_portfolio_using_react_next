@@ -8,8 +8,8 @@
     ],
     "rewrites": [
       {
-        "source": "project/**",
-        "destination": "project/[projectId]/index.html"
+        "source": "/project/**",
+        "destination": "/project/[projectId]/index.html"
       }
     ]
   }
