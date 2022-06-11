@@ -1,4 +1,4 @@
-import React, { useParams } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
@@ -11,7 +11,7 @@ import {
   ExternalLinks,
   UtilityList,
 } from "../../components/Projects/ProjectsStyles";
-const projectDetails = ({ projectId }) => {
+const projectDetails = () => {
   const router = useRouter();
   const id = router?.query?.projectId;
 
@@ -56,12 +56,12 @@ const projectDetails = ({ projectId }) => {
     </>
   );
 };
-export const getServerSideProps = async (context) => {
+/* export const getServerSideProps = async (context) => {
   console.log(context.query);
   const { projectId } = context.query;
   if (!projectId) {
     projectId = null;
   }
   return { props: { projectId: projectId } };
-};
+}; */
 export default projectDetails;
