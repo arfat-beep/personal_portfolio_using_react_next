@@ -1,4 +1,5 @@
 import Acomplishments from "../components/Acomplishments/Acomplishments";
+import Head from "next/head";
 import BgAnimation from "../components/BackgrooundAnimation/BackgroundAnimation";
 import BringTop from "../components/BringTop";
 import Hero from "../components/Hero/Hero";
