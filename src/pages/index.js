@@ -13,6 +13,10 @@ const Home = () => {
   return (
     <Layout>
       <Head>
+        <link
+          rel="apple-touch-icon"
+          href="https://i.ibb.co/6r1vGnG/arfat-xyz-tab-logo.jpg"
+        />
         <title>
           Arfatur Rahman || Frontend Developer || Mern Stack Developer
         </title>
